@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MenuJi · AI table ordering for restaurants</title>
+<meta name="description" content="MenuJi is QR table ordering for restaurants in Bengaluru. Guests scan, type what they want and get a list priced from your menu. No app to download.">
+<meta name="theme-color" content="#f6f6f3">
+<link rel="canonical" href="https://www.menuji.co.in/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MenuJi">
+<meta property="og:title" content="MenuJi · Your menu, answered by AI">
+<meta property="og:description" content="QR table ordering for restaurants in Bengaluru. Guests scan, type what they want and get a list priced from your menu. No app.">
+<meta property="og:url" content="https://www.menuji.co.in/">
+<meta property="og:image" content="https://www.menuji.co.in/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MenuJi: your menu, answered by AI. A guest's chat with a priced list of dishes.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="frame top-row">
+    <a class="wordmark" href="#main" aria-label="MenuJi, back to top">MenuJi</a>
+    <nav class="top-nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#menu">Your menu</a>
+      <a href="#kitchen">Kitchen screen</a>
+    </nav>
+    <a class="btn primary small" href="#book">Book a demo</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero frame" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">Your menu, answered by AI.</h1>
+      <p class="lede">Guests scan, type, get a priced list. No app.</p>
+      <p class="sub">MenuJi is table ordering for restaurants in Bengaluru.</p>
+      <div class="actions">
+        <a class="btn primary" href="#book">Book a demo</a>
+        <button class="btn quiet js-only" type="button" data-open-menu>See demo menu</button>
+      </div>
+    </div>
+
+    <div class="hero-demo">
+      <div class="stage">
+        <div class="ui phone" data-ui>
+          <div class="ui-bar">
+            <span class="ui-title">Table 4</span>
+            <button class="ui-cart js-only" type="button" id="cart" hidden></button>
+            <button class="ui-chip js-only" type="button" data-open-menu>Menu</button>
+          </div>
+
+          <div class="ui-log" id="log" role="log" aria-live="polite" aria-label="Demo chat" tabindex="0">
+            <p class="msg bot">Hi! You're at Table 4. Ask about the menu or tell me what you'd like.</p>
+            <p class="msg me">2 butter naan and a masala tea</p>
+            <p class="msg bot">Done. Here's your list.</p>
+            <div class="card" id="first-card" role="group" aria-label="Your list">
+              <div class="line"><span class="qty-static">2 ×</span><span class="line-name">Butter Naan</span><span class="line-price">₹90</span></div>
+              <div class="line"><span class="qty-static">1 ×</span><span class="line-name">Masala Tea</span><span class="line-price">₹30</span></div>
+              <div class="line total"><span class="line-name">Total</span><span class="line-price">₹120</span></div>
+              <p class="card-note">Please confirm the order with the waiter.</p>
+            </div>
+          </div>
+
+          <div class="ui-ideas js-only" role="group" aria-label="Questions to try">
+            <button class="ui-chip" type="button" data-q="Veg under ₹150">Veg under ₹150</button>
+            <button class="ui-chip" type="button" data-q="Chicken dishes?">Chicken dishes?</button>
+            <button class="ui-chip" type="button" data-q="Show my bill">Show my bill</button>
+          </div>
+
+          <form class="ui-ask js-only" id="ask" autocomplete="off">
+            <label class="sr" for="q">Your question</label>
+            <input id="q" name="q" type="text" value="What's the cheapest item?" placeholder="Ask or order food here" maxlength="120" enterkeyhint="send">
+            <button class="ui-send" type="submit">Ask</button>
+          </form>
+          <p class="ui-fine">AI can make mistakes. Ask staff about allergies.</p>
+        </div>
+      </div>
+      <p class="caption">Try it. This is a scripted demo on a sample menu.</p>
+    </div>
+  </section>
+
+  <section class="section frame" id="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="rv">How a table orders</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-copy rv">
+          <p class="statement">Guests scan the QR code on their table.</p>
+          <p class="note">There's nothing to download and no sign-up.</p>
+        </div>
+        <div class="stage stage-qr rv" style="--i:1">
+          <div class="tent" data-ui role="img" aria-label="A table card with a QR code that reads: Table 4, scan to order">
+            <svg viewBox="0 0 25 25" aria-hidden="true" shape-rendering="crispEdges"><path fill="#141613" d="M0 0h1v1h-1zM1 0h1v1h-1zM2 0h1v1h-1zM3 0h1v1h-1zM4 0h1v1h-1zM5 0h1v1h-1zM6 0h1v1h-1zM13 0h1v1h-1zM15 0h1v1h-1zM18 0h1v1h-1zM19 0h1v1h-1zM20 0h1v1h-1zM21 0h1v1h-1zM22 0h1v1h-1zM23 0h1v1h-1zM24 0h1v1h-1zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM11 1h1v1h-1zM12 1h1v1h-1zM13 1h1v1h-1zM18 1h1v1h-1zM24 1h1v1h-1zM0 2h1v1h-1zM2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM6 2h1v1h-1zM10 2h1v1h-1zM13 2h1v1h-1zM18 2h1v1h-1zM20 2h1v1h-1zM21 2h1v1h-1zM22 2h1v1h-1zM24 2h1v1h-1zM0 3h1v1h-1zM2 3h1v1h-1zM3 3h1v1h-1zM4 3h1v1h-1zM6 3h1v1h-1zM10 3h1v1h-1zM11 3h1v1h-1zM12 3h1v1h-1zM13 3h1v1h-1zM14 3h1v1h-1zM15 3h1v1h-1zM16 3h1v1h-1zM18 3h1v1h-1zM20 3h1v1h-1zM21 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM0 4h1v1h-1zM2 4h1v1h-1zM3 4h1v1h-1zM4 4h1v1h-1zM6 4h1v1h-1zM9 4h1v1h-1zM12 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM16 4h1v1h-1zM18 4h1v1h-1zM20 4h1v1h-1zM21 4h1v1h-1zM22 4h1v1h-1zM24 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM10 5h1v1h-1zM11 5h1v1h-1zM15 5h1v1h-1zM16 5h1v1h-1zM18 5h1v1h-1zM24 5h1v1h-1zM0 6h1v1h-1zM1 6h1v1h-1zM2 6h1v1h-1zM3 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM9 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM15 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM19 6h1v1h-1zM20 6h1v1h-1zM21 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM10 7h1v1h-1zM11 7h1v1h-1zM16 7h1v1h-1zM0 8h1v1h-1zM1 8h1v1h-1zM8 8h1v1h-1zM9 8h1v1h-1zM10 8h1v1h-1zM12 8h1v1h-1zM13 8h1v1h-1zM15 8h1v1h-1zM16 8h1v1h-1zM17 8h1v1h-1zM19 8h1v1h-1zM24 8h1v1h-1zM2 9h1v1h-1zM3 9h1v1h-1zM5 9h1v1h-1zM8 9h1v1h-1zM10 9h1v1h-1zM11 9h1v1h-1zM12 9h1v1h-1zM13 9h1v1h-1zM16 9h1v1h-1zM19 9h1v1h-1zM20 9h1v1h-1zM24 9h1v1h-1zM1 10h1v1h-1zM3 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM12 10h1v1h-1zM15 10h1v1h-1zM19 10h1v1h-1zM21 10h1v1h-1zM22 10h1v1h-1zM23 10h1v1h-1zM0 11h1v1h-1zM9 11h1v1h-1zM11 11h1v1h-1zM13 11h1v1h-1zM14 11h1v1h-1zM18 11h1v1h-1zM22 11h1v1h-1zM8 12h1v1h-1zM9 12h1v1h-1zM10 12h1v1h-1zM17 12h1v1h-1zM19 12h1v1h-1zM20 12h1v1h-1zM23 12h1v1h-1zM24 12h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM14 13h1v1h-1zM16 13h1v1h-1zM18 13h1v1h-1zM23 13h1v1h-1zM2 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM11 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM15 14h1v1h-1zM16 14h1v1h-1zM0 15h1v1h-1zM1 15h1v1h-1zM6 15h1v1h-1zM9 15h1v1h-1zM10 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM18 15h1v1h-1zM19 15h1v1h-1zM21 15h1v1h-1zM23 15h1v1h-1zM1 16h1v1h-1zM3 16h1v1h-1zM4 16h1v1h-1zM6 16h1v1h-1zM10 16h1v1h-1zM12 16h1v1h-1zM14 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM23 16h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM11 17h1v1h-1zM12 17h1v1h-1zM18 17h1v1h-1zM19 17h1v1h-1zM20 17h1v1h-1zM23 17h1v1h-1zM24 17h1v1h-1zM0 18h1v1h-1zM1 18h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM4 18h1v1h-1zM5 18h1v1h-1zM6 18h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM10 18h1v1h-1zM12 18h1v1h-1zM13 18h1v1h-1zM15 18h1v1h-1zM16 18h1v1h-1zM20 18h1v1h-1zM22 18h1v1h-1zM23 18h1v1h-1zM0 19h1v1h-1zM6 19h1v1h-1zM9 19h1v1h-1zM11 19h1v1h-1zM13 19h1v1h-1zM14 19h1v1h-1zM15 19h1v1h-1zM16 19h1v1h-1zM19 19h1v1h-1zM21 19h1v1h-1zM24 19h1v1h-1zM0 20h1v1h-1zM2 20h1v1h-1zM3 20h1v1h-1zM4 20h1v1h-1zM6 20h1v1h-1zM10 20h1v1h-1zM11 20h1v1h-1zM16 20h1v1h-1zM18 20h1v1h-1zM20 20h1v1h-1zM22 20h1v1h-1zM23 20h1v1h-1zM24 20h1v1h-1zM0 21h1v1h-1zM2 21h1v1h-1zM3 21h1v1h-1zM4 21h1v1h-1zM6 21h1v1h-1zM9 21h1v1h-1zM10 21h1v1h-1zM12 21h1v1h-1zM13 21h1v1h-1zM14 21h1v1h-1zM16 21h1v1h-1zM17 21h1v1h-1zM20 21h1v1h-1zM0 22h1v1h-1zM2 22h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM6 22h1v1h-1zM8 22h1v1h-1zM10 22h1v1h-1zM11 22h1v1h-1zM12 22h1v1h-1zM17 22h1v1h-1zM18 22h1v1h-1zM22 22h1v1h-1zM23 22h1v1h-1zM24 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM9 23h1v1h-1zM11 23h1v1h-1zM12 23h1v1h-1zM14 23h1v1h-1zM18 23h1v1h-1zM19 23h1v1h-1zM20 23h1v1h-1zM21 23h1v1h-1zM22 23h1v1h-1zM23 23h1v1h-1zM0 24h1v1h-1zM1 24h1v1h-1zM2 24h1v1h-1zM3 24h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM6 24h1v1h-1zM12 24h1v1h-1zM16 24h1v1h-1zM18 24h1v1h-1zM19 24h1v1h-1zM21 24h1v1h-1zM24 24h1v1h-1z"/></svg>
+            <p class="tent-table">Table 4</p>
+            <p class="tent-hint">Scan to order</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-copy rv">
+          <p class="statement">They type what they want.</p>
+          <p class="note">They can also ask what's cheapest or what's veg.</p>
+        </div>
+        <div class="stage stage-type rv" style="--i:1">
+          <div class="ui crop" data-ui role="img" aria-label="The guest's typing box holding the message: 2 butter naan, a dal tadka and a masala tea">
+            <div class="ui-ask static">
+              <span class="fake-input">2 butter naan, a dal tadka and a masala tea<i class="caret"></i></span>
+              <span class="ui-send">Ask</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-copy rv">
+          <p class="statement">They get a priced list to show the waiter.</p>
+          <p class="note">Every price comes from your menu.</p>
+        </div>
+        <div class="stage stage-list rv" style="--i:1">
+          <div class="ui crop" data-ui role="img" aria-label="The guest's list: 2 Butter Naan for ₹90, 1 Dal Tadka for ₹130, 1 Masala Tea for ₹30. Total ₹250. Buttons: Add more, Given to the waiter.">
+            <div class="card">
+              <div class="line"><span class="stepper"><i>−</i><b>2</b><i>+</i></span><span class="line-name">Butter Naan</span><span class="line-price">₹90</span></div>
+              <div class="line"><span class="stepper"><i>×</i><b>1</b><i>+</i></span><span class="line-name">Dal Tadka</span><span class="line-price">₹130</span></div>
+              <div class="line"><span class="stepper"><i>×</i><b>1</b><i>+</i></span><span class="line-name">Masala Tea</span><span class="line-price">₹30</span></div>
+              <div class="line total"><span class="line-name">Total</span><span class="line-price">₹250</span></div>
+              <div class="card-actions"><span class="ui-btn ghost">Add more</span><span class="ui-btn">Given to the waiter</span></div>
+              <p class="card-note">Please confirm the order with the waiter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section frame" id="menu" aria-labelledby="menu-title">
+    <h2 id="menu-title" class="rv">You stay in charge of the menu</h2>
+
+    <div class="plate">
+      <ul class="notes notes-left">
+        <li class="rv">
+          <h3>Your prices, every time</h3>
+          <p>The AI never sets a price.</p>
+        </li>
+        <li class="rv" style="--i:1">
+          <h3>Sold out in one tap</h3>
+          <p>Staff mark a dish sold out and guests can no longer add it.</p>
+        </li>
+        <li class="rv" style="--i:2">
+          <h3>Photos from your kitchen</h3>
+          <p>Staff take the photo and guests see it on the menu.</p>
+        </li>
+      </ul>
+
+      <div class="ui menu-ui rv" data-ui role="img" aria-label="The guest menu. Starters and mains with prices, a bestseller tag, a camera on dishes that have a photo, one dish marked sold out today, and a cart of 3 items for ₹540.">
+        <div class="ui-bar"><span class="ui-title">Menu</span><span class="ui-cart">3 · ₹540 · Review</span></div>
+        <div class="menu-search">Search dishes</div>
+        <p class="menu-cat">Starters</p>
+        <div class="dish"><i class="veg"></i><span class="dish-name">Gobi Manchurian <em>Bestseller</em></span><span class="dish-price">₹120</span><svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg><span class="add">+</span></div>
+        <div class="dish"><i class="veg"></i><span class="dish-name">Paneer Tikka</span><span class="dish-price">₹180</span><span class="add on">1</span></div>
+        <div class="dish"><i class="veg non"></i><span class="dish-name">Chicken 65 <em>Spicy</em></span><span class="dish-price">₹160</span><svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg><span class="add">+</span></div>
+        <p class="menu-cat">Mains</p>
+        <div class="dish"><i class="veg"></i><span class="dish-name">Dal Tadka</span><span class="dish-price">₹130</span><span class="add">+</span></div>
+        <div class="dish"><i class="veg non"></i><span class="dish-name">Chicken Biryani <em>Bestseller</em></span><span class="dish-price">₹180</span><svg class="cam" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg><span class="add on">2</span></div>
+        <div class="dish out"><i class="veg non"></i><span class="dish-name">Butter Chicken</span><span class="dish-price">Sold out today</span></div>
+        <div class="dish"><i class="veg"></i><span class="dish-name">Veg Biryani</span><span class="dish-price">₹140</span><span class="add">+</span></div>
+      </div>
+
+      <ul class="notes notes-right">
+        <li class="rv">
+          <h3>Ask or tap</h3>
+          <p>Guests can type their order or pick dishes from the menu.</p>
+        </li>
+        <li class="rv" style="--i:1">
+          <h3>The bill on their phone</h3>
+          <p>Guests ask "Show my bill" and see their total.</p>
+        </li>
+        <li class="rv" style="--i:2">
+          <h3>A QR code for each table</h3>
+          <p>Each code orders to its own table only.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section frame" id="kitchen" aria-labelledby="kitchen-title">
+    <div class="split-head">
+      <h2 id="kitchen-title" class="rv">Orders show up in the kitchen</h2>
+      <p class="rv" style="--i:1">The order appears here when the guest sends it. You can also start without this screen and add it later.</p>
+    </div>
+
+    <div class="ui kds rv" data-ui role="group" aria-label="Kitchen screen demo">
+      <div class="kds-bar">
+        <span class="ui-title">Kitchen</span>
+        <span class="kds-tabs" aria-hidden="true"><b>Live orders</b><span>Tables</span><span>Photos</span><span>Stats</span></span>
+        <span class="kds-user">Meena · Sign out</span>
+      </div>
+      <div class="tickets">
+        <article class="ticket" data-state="new">
+          <header><h3>Table 4</h3><span class="status">New</span></header>
+          <p class="ticket-meta">Sent 1 min ago</p>
+          <ul>
+            <li><span>2 × Butter Naan</span><span>₹90</span></li>
+            <li><span>1 × Dal Tadka</span><span>₹130</span></li>
+            <li><span>1 × Masala Tea</span><span>₹30</span></li>
+          </ul>
+          <p class="ticket-total"><span>Total</span><span>₹250</span></p>
+          <div class="ticket-actions">
+            <button class="ui-btn" type="button" data-advance>Confirm order</button>
+            <button class="ui-btn ghost" type="button" data-cancel>Cancel</button>
+          </div>
+        </article>
+        <article class="ticket" data-state="preparing">
+          <header><h3>Table 7</h3><span class="status">Preparing…</span></header>
+          <p class="ticket-meta">Confirmed by Ravi · 6 min ago</p>
+          <ul>
+            <li><span>1 × Chicken Biryani</span><span>₹180</span></li>
+            <li><span>1 × Chicken 65</span><span>₹160</span></li>
+            <li><span>2 × Fresh Lime Soda</span><span>₹120</span></li>
+          </ul>
+          <p class="ticket-total"><span>Total</span><span>₹460</span></p>
+          <div class="ticket-actions">
+            <button class="ui-btn" type="button" data-advance>Mark served</button>
+          </div>
+        </article>
+        <article class="ticket" data-state="served">
+          <header><h3>Table 2</h3><span class="status">Served</span></header>
+          <p class="ticket-meta">Served by Meena · 14 min ago</p>
+          <ul>
+            <li><span>2 × Veg Biryani</span><span>₹280</span></li>
+            <li><span>1 × Sweet Lassi</span><span>₹70</span></li>
+          </ul>
+          <p class="ticket-total"><span>Total</span><span>₹350</span></p>
+        </article>
+      </div>
+    </div>
+
+    <ul class="facts">
+      <li class="rv">
+        <h3>Name and PIN</h3>
+        <p>Staff sign in with their name and a PIN.</p>
+      </li>
+      <li class="rv" style="--i:1">
+        <h3>A name on every action</h3>
+        <p>You can see who confirmed, cancelled or served each order.</p>
+      </li>
+      <li class="rv" style="--i:2">
+        <h3>New orders make a sound</h3>
+        <p>Nobody has to keep watching the screen.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section frame" id="delivery" aria-labelledby="delivery-title">
+    <div class="band">
+      <h2 id="delivery-title" class="rv">Delivery is coming soon</h2>
+      <p class="rv" style="--i:1">MenuJi will book the rider, so you won't need delivery staff. It isn't built yet.</p>
+    </div>
+  </section>
+
+  <section class="section frame book" id="book" aria-labelledby="book-title">
+    <h2 id="book-title" class="rv">See it on your own menu</h2>
+    <div class="book-copy">
+      <p class="statement rv" style="--i:1">I'll set it up on your menu and show it working at your table.</p>
+      <p class="rv" style="--i:2">Email me and I'll reply with a time.</p>
+      <div class="mail rv" style="--i:3">
+        <a class="btn primary" href="mailto:contact@menuji.co.in?subject=Demo%20request%20for%20MenuJi&amp;body=Hello%2C%0D%0A%0D%0AI%20would%20like%20to%20see%20MenuJi%20working%20on%20our%20menu.%20Please%20let%20me%20know%20a%20time%20for%20a%20demo.%0D%0A%0D%0ARestaurant%20name%3A%0D%0AArea%3A%0D%0APhone%20number%3A%0D%0ABest%20time%20to%20call%3A%0D%0A%0D%0AThank%20you.">Email to book a demo</a>
+        <button class="btn quiet js-only" type="button" data-copy="contact@menuji.co.in">Copy address</button>
+      </div>
+      <p class="mail-note rv" style="--i:4">The message is already written. You can also <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40menuji.co.in&amp;su=Demo%20request%20for%20MenuJi&amp;body=Hello%2C%0D%0A%0D%0AI%20would%20like%20to%20see%20MenuJi%20working%20on%20our%20menu.%20Please%20let%20me%20know%20a%20time%20for%20a%20demo.%0D%0A%0D%0ARestaurant%20name%3A%0D%0AArea%3A%0D%0APhone%20number%3A%0D%0ABest%20time%20to%20call%3A%0D%0A%0D%0AThank%20you." target="_blank" rel="noopener">open it in Gmail</a>, or write to <a href="mailto:contact@menuji.co.in">contact@menuji.co.in</a>.</p>
+      <p class="sign rv" style="--i:5">Akash Dileep, MenuJi</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot frame">
+  <div class="foot-meta">
+    <p>Akash Dileep, MenuJi</p>
+    <p>Table ordering by chat · Bengaluru</p>
+    <p><a href="mailto:contact@menuji.co.in">contact@menuji.co.in</a></p>
+    <nav aria-label="Footer">
+      <a href="#how">How it works</a>
+      <a href="#kitchen">Kitchen screen</a>
+      <a href="#book">Book a demo</a>
+    </nav>
+  </div>
+  <p class="foot-mark" aria-hidden="true">MenuJi</p>
+</footer>
+
+<dialog class="ui sheet" id="menu-dialog" data-ui aria-labelledby="sheet-title">
+  <div class="ui-bar">
+    <h2 class="ui-title" id="sheet-title">Demo menu</h2>
+    <button class="ui-chip" type="button" data-close-menu>Close</button>
+  </div>
+  <div class="sheet-body" id="sheet-body"></div>
+  <p class="ui-fine">This is a sample menu for the demo. Add a dish and it joins the list in the chat.</p>
+</dialog>
+
+</body>
+</html>

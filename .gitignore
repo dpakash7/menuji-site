@@ -1,0 +1,8 @@
+node_modules
+.env
+.env.*
+.vercel
+
+# working notes and design-tool files: kept on this computer, not published
+CLAUDE.md
+.taste-skill/
