@@ -52,12 +52,12 @@
       if (t.dataset.state === "new") {
         t.dataset.state = "preparing";
         status.textContent = "Preparing…";
-        meta.textContent = "Confirmed by Meena · just now";
+        meta.textContent = "Confirmed · just now";
         btn.textContent = "Mark served";
       } else {
         t.dataset.state = "served";
         status.textContent = "Served";
-        meta.textContent = "Served by Meena · just now";
+        meta.textContent = "Served · just now";
         btn.parentElement.remove();
       }
     });
@@ -68,7 +68,7 @@
       const t = btn.closest(".ticket");
       t.dataset.state = "cancelled";
       t.querySelector(".status").textContent = "Cancelled";
-      t.querySelector(".ticket-meta").textContent = "Cancelled by Meena · just now";
+      t.querySelector(".ticket-meta").textContent = "Cancelled · just now";
       btn.parentElement.remove();
     });
   });
